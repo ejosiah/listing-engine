@@ -26,6 +26,7 @@ public class Listing implements Entity<Listing> {
 	private final Set<CategoryId> categories = new LinkedHashSet<CategoryId>();
 	private final Set<byte[]> images = new LinkedHashSet<byte[]>();
 	private final Set<Field> fields = new LinkedHashSet<Field>();
+	private final Set<PromotionType> promotions = new LinkedHashSet<PromotionType>();
 	private Location location;
 	private DateTime dateUpdated;
 	private boolean published;
@@ -48,6 +49,10 @@ public class Listing implements Entity<Listing> {
 	
 	public void addField(Field field){
 		fields.add(field);
+	}
+	
+	public void addPromotion(PromotionType promotionType){
+		promotions.add(promotionType);
 	}
 	
 	public boolean sameIdentityAs(Listing other) {
