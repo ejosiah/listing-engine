@@ -10,7 +10,9 @@ public interface CategoryRepository {
 	
 	CategoryId nextIdentity();
 	
-	Category CategoryOfId(CategoryId aCategory);
+	Category categoryOfId(CategoryId aCategory);
 	
 	Collection<Category> retriveAll();
+
+	CategoryId categoryIdForName(String name);
 }
