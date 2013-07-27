@@ -10,15 +10,15 @@ import lombok.experimental.Accessors;
 
 import org.joda.time.DateTime;
 
+import com.jebhomenye.domain.common.core.Entity;
 import com.jebhomenye.listing.domain.model.category.CategoryId;
 import com.jebhomenye.listing.domain.model.user.UserId;
-import com.jebhomenye.listing.domain.shared.Entity;
 
 @Data
 @Accessors(fluent=true)
 @EqualsAndHashCode(exclude={"dateCreated", "dateUpdated"})
-public class Listing implements Entity<Listing> {
-	@NonNull private final ListingId listingId;
+public class Listing implements Entity<Listing, ListingId> {
+	@NonNull private final ListingId id;
 	@NonNull private final String name;
 	@NonNull private final UserId listedBy;
 	private final DateTime dateCreated;

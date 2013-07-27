@@ -1,13 +1,13 @@
 package com.jebhomenye.listing.domain.model.listing;
 
-import org.joda.time.DateTime;
-
 import lombok.Data;
 import lombok.experimental.Accessors;
 
+import org.joda.time.DateTime;
+
+import com.jebhomenye.domain.common.core.ValueObject;
 import com.jebhomenye.listing.domain.model.category.CategoryId;
 import com.jebhomenye.listing.domain.model.user.UserId;
-import com.jebhomenye.listing.domain.shared.ValueObject;
 
 @Data
 @Accessors(fluent=true)

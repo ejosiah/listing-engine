@@ -27,9 +27,9 @@ import com.jebhomenye.listing.id.UUIDGenerator;
 @RunWith(MockitoJUnitRunner.class)
 public class ListingAssemblerUTest {
 	private static final UUIDGenerator idGenerator = new UUIDGenerator();
-	private static final ListingId LISTING_ID = new ListingId(idGenerator.generateId());
-	private static final String USER_ID = idGenerator.generateId();
-	private static final String CATEGORY_ID = idGenerator.generateId();
+	private static final ListingId LISTING_ID = new ListingId(idGenerator.nextID());
+	private static final String USER_ID = idGenerator.nextID();
+	private static final String CATEGORY_ID = idGenerator.nextID();
 	
 	private static final Map<String, Object> fields = new HashMap<String, Object>();
 	

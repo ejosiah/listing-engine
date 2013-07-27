@@ -9,12 +9,12 @@ import lombok.experimental.Accessors;
 
 import org.joda.time.DateTime;
 
-import com.jebhomenye.listing.domain.shared.Entity;
+import com.jebhomenye.domain.common.core.Entity;
 
 @Data
 @Accessors(fluent=true)
-public class Category implements Entity<Category> {
-	@NonNull private final CategoryId categoryId;
+public class Category implements Entity<Category, CategoryId> {
+	@NonNull private final CategoryId id;
 	@NonNull private final String name;
 	@NonNull private final DateTime dateCreated;
 	private String description;
@@ -35,7 +35,7 @@ public class Category implements Entity<Category> {
 	}
 	
 	public boolean sameIdentityAs(Category other) {
-		return this.categoryId().sameValuesAs(other.categoryId());
+		return this.id().sameValuesAs(other.id());
 	}
 	
 	public Set<MetaData> metaData(){
