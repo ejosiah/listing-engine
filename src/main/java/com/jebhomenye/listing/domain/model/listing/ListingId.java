@@ -9,6 +9,8 @@ import com.jebhomenye.domain.common.core.ValueObject;
 @Data
 @Accessors(fluent=true)
 public class ListingId implements Identity<String>, ValueObject<ListingId>{
+
+	private static final long serialVersionUID = 1L;
 	private final String id;
 	
 	public boolean sameValuesAs(ListingId other) {
